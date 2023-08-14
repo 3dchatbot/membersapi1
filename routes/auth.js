@@ -55,7 +55,7 @@ router.get("/login/success", (req, res) => {
 						username: user.username,
 						email: user.email,
 					    roles: authorities,
-				//	    accessToken: token,
+					    accessToken: token,
 					  error: false,
 					  message: "Your a G",
 					  user: req.user
