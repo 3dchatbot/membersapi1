@@ -26,6 +26,8 @@ app.use(express.static(__dirname));
 
 //app.use('/node_modules/', express.static('/node_modules/'));
 
+app.use('/static', express.static(__dirname + '/public'));
+
 app.use("/node_modules", express.static(path.join(__dirname, 'node_modules')));
 
 app.use(cors(corsOptions));
