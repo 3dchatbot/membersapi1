@@ -7,13 +7,20 @@ const path = require('path');
 const express = require("express");
 const cors = require("cors");
 const dbConfig = require("./app/config/db.config");
+const finalhandler = require('finalhandler');
+const serveStatic = require('serve-static');
 
+const serve = serveStatic("/node_modules");
+const http = require('http');
 
 const app = express();
 
 var corsOptions = {
   origin: "*"
 };
+
+
+app.use(express.static(__dirname));
 
 app.use(cors(corsOptions));
 
@@ -39,6 +46,12 @@ db.mongoose
     console.error("Connection error", err);
     process.exit();
   });
+
+var server = http.createServer(function(req, res) {
+  var done = finalhandler(req, res);
+  serve(req, res, done);
+});
+
 app.get('/studio1', function(req, res) {
   res.sendFile(path.join(__dirname, '/index.html'));
 });
@@ -57,7 +70,7 @@ app.get("/", (req, res) => {
 
 //google stuff
 
-
+app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use(express.json());
 app.use(
 	cookieSession({
