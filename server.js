@@ -22,7 +22,9 @@ var corsOptions = {
 
 app.use(express.static(__dirname));
 
-app.use('/node_modules', express.static('node_modules'));
+app.use(express.static('node_modules'));
+
+//app.use('/node_modules', express.static('node_modules'));
 
 app.use(cors(corsOptions));
 
@@ -72,7 +74,7 @@ app.get("/", (req, res) => {
 
 //google stuff
 
-//app.use('/node_modules', express.static(__dirname + '/node_modules'));
+app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use(express.json());
 app.use(
 	cookieSession({
