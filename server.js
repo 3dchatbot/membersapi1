@@ -3,15 +3,24 @@ const passport = require("passport");
 const authRoute = require("./routes/auth");
 const cookieSession = require("cookie-session");
 const passportStrategy = require("./passport");
+const path = require('path');
 const express = require("express");
 const cors = require("cors");
 const dbConfig = require("./app/config/db.config");
+const finalhandler = require('finalhandler');
+const serveStatic = require('serve-static');
+
+const serve = serveStatic("/node_modules");
+const http = require('http');
 
 const app = express();
 
 var corsOptions = {
   origin: "*"
 };
+
+
+app.use(express.static(__dirname));
 
 app.use(cors(corsOptions));
 
@@ -38,6 +47,22 @@ db.mongoose
     process.exit();
   });
 
+var server = http.createServer(function(req, res) {
+  var done = finalhandler(req, res);
+  serve(req, res, done);
+});
+
+app.get('/studio1', function(req, res) {
+  res.sendFile(path.join(__dirname, '/index.html'));
+});
+
+app.get('/js/main.js', function(req, res) {
+  res.sendFile(path.join(__dirname, '/js/main.js'));
+});
+
+app.get('/css/style.css', function(req, res) {
+  res.sendFile(path.join(__dirname, '/css/style.css'));
+});
 // simple route
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to emersa application." });
@@ -45,7 +70,7 @@ app.get("/", (req, res) => {
 
 //google stuff
 
-
+app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use(express.json());
 app.use(
 	cookieSession({
