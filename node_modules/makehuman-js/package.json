@@ -1,0 +1,105 @@
+{
+  "_from": "makehuman-js@^0.1.3",
+  "_id": "makehuman-js@0.1.3",
+  "_inBundle": false,
+  "_integrity": "sha512-W9pToxxfWGMx23MEw8NBcihsHHFked3Z1eLruniz4sVAztJ1KrT/OYBDkj1R22ieI8Pfo/syRBE787Q7+KIqbA==",
+  "_location": "/makehuman-js",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "makehuman-js@^0.1.3",
+    "name": "makehuman-js",
+    "escapedName": "makehuman-js",
+    "rawSpec": "^0.1.3",
+    "saveSpec": null,
+    "fetchSpec": "^0.1.3"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/makehuman-js/-/makehuman-js-0.1.3.tgz",
+  "_shasum": "38a5880e03a12c4e4b716fe43e625c43608cfdfe",
+  "_spec": "makehuman-js@^0.1.3",
+  "_where": "/Users/justin/Documents/GitHub/123w",
+  "author": {
+    "name": "wassname"
+  },
+  "bugs": {
+    "url": "https://github.com/makehuman-js/makehuman-js/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "d3-random": "^0.2.1",
+    "lodash": "^4.5.1",
+    "makehuman-data": "0.0.2",
+    "qs": "^6.3.0",
+    "three": "^0.82.1",
+    "tween": "^0.9.0"
+  },
+  "deprecated": false,
+  "description": "Builds 3D human characters in the browser",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-es2015-modules-commonjs-simple": "^6.7.4",
+    "babel-plugin-transform-flow-strip-types": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "babel-preset-es2015-webpack": "^6.4.3",
+    "babel-preset-stage-1": "^6.16.0",
+    "babel-register": "^6.4.3",
+    "babel-runtime": "^6.3.19",
+    "bignumber": "^1.1.0",
+    "bignumber.js": "^2.3.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.2.0",
+    "chai-bignumber": "^1.0.0",
+    "chai-things": "^0.2.0",
+    "eslint": "^3.10.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-import-resolver-webpack": "^0.7.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.2.0",
+    "exports-loader": "^0.6.3",
+    "file-loader": "^0.9.0",
+    "imports-loader": "^0.6.5",
+    "json-loader": "^0.5.4",
+    "jstat": "^1.5.3",
+    "mocha": "^2.4.5",
+    "raw-loader": "^0.5.1",
+    "url-loader": "^0.5.7",
+    "webpack": "2.1.0-beta.21",
+    "webpack-dev-server": "2.1.0-beta.10"
+  },
+  "homepage": "https://github.com/makehuman-js/makehuman-js#readme",
+  "keywords": [
+    "3d",
+    "human",
+    "model",
+    "characters",
+    "makehuman"
+  ],
+  "license": "AGPLv3",
+  "main": "src/bundle.js",
+  "name": "makehuman-js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makehuman-js/makehuman-js.git"
+  },
+  "scripts": {
+    "build": "webpack --progress",
+    "build:debug": "webpack --show-errors",
+    "release": "NODE_ENV=production webpack --progress",
+    "start": "webpack-dev-server --inline --progress",
+    "test": "webpack-dev-server --config webpack.test.config.js --open",
+    "try_release": "NODE_ENV=production npm start",
+    "watch": "webpack --progress --watch"
+  },
+  "version": "0.1.3"
+}
