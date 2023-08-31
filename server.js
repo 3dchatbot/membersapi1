@@ -22,6 +22,8 @@ var corsOptions = {
 
 app.use(express.static(__dirname));
 
+app.use('/node_modules', express.static('node_modules'));
+
 app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
@@ -70,7 +72,7 @@ app.get("/", (req, res) => {
 
 //google stuff
 
-app.use('/node_modules', express.static(__dirname + '/node_modules'));
+//app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use(express.json());
 app.use(
 	cookieSession({
