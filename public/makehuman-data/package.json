@@ -1,0 +1,39 @@
+{
+  "_from": "makehuman-data@0.0.2",
+  "_id": "makehuman-data@0.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-wIXbgAjbcmkgcPaMiqynSKYMcz8QR5a7lBSJKY/20BOhIxh5X2hYabJTdhB+DxfjM7O39drB+0fHKVjTygpWuA==",
+  "_location": "/makehuman-data",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "makehuman-data@0.0.2",
+    "name": "makehuman-data",
+    "escapedName": "makehuman-data",
+    "rawSpec": "0.0.2",
+    "saveSpec": null,
+    "fetchSpec": "0.0.2"
+  },
+  "_requiredBy": [
+    "/makehuman-js"
+  ],
+  "_resolved": "https://registry.npmjs.org/makehuman-data/-/makehuman-data-0.0.2.tgz",
+  "_shasum": "9c03bfbf2cb2ab22628cd449b5720431185cab52",
+  "_spec": "makehuman-data@0.0.2",
+  "_where": "/Users/justin/Documents/GitHub/123w/node_modules/makehuman-js",
+  "author": {
+    "name": "wassname"
+  },
+  "bundleDependencies": false,
+  "contributors": "http://www.makehuman.org/halloffame.php",
+  "deprecated": false,
+  "description": "Provides makehuman.org's data in json as a npm package.",
+  "license": "http://www.makehuman.org/license.php",
+  "main": "index.js",
+  "name": "makehuman-data",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.2"
+}
